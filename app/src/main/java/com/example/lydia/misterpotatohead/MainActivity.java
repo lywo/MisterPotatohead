@@ -37,19 +37,25 @@ public class MainActivity extends AppCompatActivity {
         nosecb = (CheckBox) findViewById(R.id.checknose);
         mouthcb = (CheckBox) findViewById(R.id.checkmouth);
         earscb = (CheckBox) findViewById(R.id.checkears);
-
     }
 
     public void onCheckboxClicked(View view) {
-        Object id= view.getTag(CheckBox);
-        if ((CheckBox).isChecked){
-            ImageView.setVisibility((View.VISIBLE);
-        } else if (!(CheckBox).isChecked) {
+        public String holder = (CheckBox) CheckBox.getTag();
+
+        
+
+        if ((CheckBox).getStatus().isChecked){
+            ImageView.setVisibility((View.VISIBLE));
+        }
+        else if (!(CheckBox).getStatus().isChecked) {
             ImageView.setVisibility(View.INVISIBLE);
-        } else {
+        }
+        else {
             return;
         }
     }
+
+
 }
 
 
