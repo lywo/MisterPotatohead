@@ -11,6 +11,8 @@ public class MainActivity extends AppCompatActivity {
     ImageView arms, shoes, hat, mustache, eyes, eyebrows, glasses, nose, mouth, ears;
     CheckBox armscb,  shoescb, hatcb, mustachecb, eyescb, eyebrowscb, glassescb, nosecb, mouthcb, earscb;
 
+//    Object Compare = [ImageView] [ CheckBox];
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,19 +42,34 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onCheckboxClicked(View view) {
-        public String holder = (CheckBox) CheckBox.getTag();
 
-        
+        String id = CheckBox.getTag();
 
-        if ((CheckBox).getStatus().isChecked){
-            ImageView.setVisibility((View.VISIBLE));
+        for (ImageView.id == id )
+        {
+            if ((CheckBox).getStatus().isChecked)
+            {
+                ImageView.setVisibility(View.VISIBLE);
+            }
+
+            else if (!(CheckBox) .getStatus() .isChecked)
+            {
+                ImageView.setVisibility(View.INVISIBLE);
+            }
+
+            else{
+                return;
+            }
         }
-        else if (!(CheckBox).getStatus().isChecked) {
-            ImageView.setVisibility(View.INVISIBLE);
-        }
-        else {
-            return;
-        }
+//        if ((CheckBox).getStatus().isChecked){
+//            ImageView.setVisibility((View.VISIBLE));
+//        }
+//        else if (!(CheckBox).getStatus().isChecked) {
+//            ImageView.setVisibility(View.INVISIBLE);
+//        }
+//        else {
+//            return;
+//        }
     }
 
 
