@@ -11,7 +11,9 @@ public class MainActivity extends AppCompatActivity {
     ImageView arms, shoes, hat, mustache, eyes, eyebrows, glasses, nose, mouth, ears;
     CheckBox armscb,  shoescb, hatcb, mustachecb, eyescb, eyebrowscb, glassescb, nosecb, mouthcb, earscb;
 
-//    Object Compare = [ImageView] [ CheckBox];
+// Link images and checkboxes
+// Object Compare = [ImageView] [ CheckBox];
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,25 +44,50 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onCheckboxClicked(View view) {
+                // Perform action on clicks, depending on whether it's now checked
 
-        String id = CheckBox.getTag();
+                // get tag and select one checkbox by id
+                // TO DO
 
-        for (ImageView.id == id )
-        {
-            if ((CheckBox).getStatus().isChecked)
-            {
-                ImageView.setVisibility(View.VISIBLE);
-            }
 
-            else if (!(CheckBox) .getStatus() .isChecked)
-            {
-                ImageView.setVisibility(View.INVISIBLE);
-            }
+                if (((CheckBox) view).isChecked()) {
+                    // display linked image
+                    ImageView.setVisibility(View.VISIBLE);
+                } else if (!((CheckBox) view) .isChecked()){
+                    // do not display linked image
+                    ImageView.setVisibility(View.INVISIBLE);
+                }
 
-            else{
-                return;
+                else {
+                    return;
             }
         }
+
+//        CheckBox.setVisibiliy(View.INVISIBLE);
+////
+//        String id = CheckBox.getTag();
+
+//        for (ImageView.id == id )
+//        {
+//            if ((CheckBox).getStatus().isChecked)
+//            {
+//                ImageView.setVisibility(View.VISIBLE);
+//            }
+//
+//            else if (!(CheckBox) .getStatus() .isChecked)
+//            {
+//                ImageView.setVisibility(View.INVISIBLE);
+//            }
+//
+//            else{
+//                return;
+//            }
+//        }
+
+
+
+
+
 //        if ((CheckBox).getStatus().isChecked){
 //            ImageView.setVisibility((View.VISIBLE));
 //        }
