@@ -6,12 +6,17 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 
+import java.util.Dictionary;
+import java.util.HashMap;
+import java.util.Map;
+
 public class MainActivity extends AppCompatActivity {
 
     ImageView arms, shoes, hat, mustache, eyes, eyebrows, glasses, nose, mouth, ears;
     CheckBox armscb,  shoescb, hatcb, mustachecb, eyescb, eyebrowscb, glassescb, nosecb, mouthcb, earscb;
 
 // Link images and checkboxes
+    // TO DO
 // Object Compare = [ImageView] [ CheckBox];
 
 
@@ -43,63 +48,48 @@ public class MainActivity extends AppCompatActivity {
         earscb = (CheckBox) findViewById(R.id.checkears);
     }
 
+//    private final Object mDisplayObject [][] = {
+//            {arms, armscb},
+//            {shoes, shoescb},
+//            {hat, hatcb},
+//            {mustache, mustachecb},
+//            {eyes, eyescb},
+//            {eyebrows, eyebrowscb},
+//            {glasses, glassescb},
+//            {mouth, mouthcb},
+//            {ears, earscb},
+//            {nose, nosecb}
+//    };
+//    private final Object[] mDisplayObjects = mDisplayObject;
+
+    private final Map<Integer , ImageView> mMap = new HashMap<Integer , ImageView>() {{
+        put(R.id.checkarms, arms);
+        put(R.id.checkshoes, shoes);
+        put(R.id.checkhat, hat);
+        put(R.id.checkmustache, mustache);
+        put(R.id.checkeyes, eyes);
+        put(R.id.checkeyebrows, eyebrows);
+        put(R.id.checkglasses, glasses);
+        put(R.id.checknose, nose);
+        put(R.id.checkmouth, mouth);
+        put(R.id.checkears, ears);
+    }};
+
     public void onCheckboxClicked(View view) {
-                // Perform action on clicks, depending on whether it's now checked
+        // Perform action on clicks, depending on whether it's now checked
+        CheckBox checkBox = (CheckBox) view;
+        int iID = checkBox.getId();
+        ImageView iView = mMap.get(iID);
 
-                // get tag and select one checkbox by id
-                // TO DO
-
-
-                if (((CheckBox) view).isChecked()) {
-                    // display linked image
-                    ImageView.setVisibility(View.VISIBLE);
-                } else if (!((CheckBox) view) .isChecked()){
-                    // do not display linked image
-                    ImageView.setVisibility(View.INVISIBLE);
-                }
-
-                else {
-                    return;
-            }
+        if (checkBox.isChecked()) {
+            // display linked image
+            iView.setVisibility(View.VISIBLE);
         }
-
-//        CheckBox.setVisibiliy(View.INVISIBLE);
-////
-//        String id = CheckBox.getTag();
-
-//        for (ImageView.id == id )
-//        {
-//            if ((CheckBox).getStatus().isChecked)
-//            {
-//                ImageView.setVisibility(View.VISIBLE);
-//            }
-//
-//            else if (!(CheckBox) .getStatus() .isChecked)
-//            {
-//                ImageView.setVisibility(View.INVISIBLE);
-//            }
-//
-//            else{
-//                return;
-//            }
-//        }
-
-
-
-
-
-//        if ((CheckBox).getStatus().isChecked){
-//            ImageView.setVisibility((View.VISIBLE));
-//        }
-//        else if (!(CheckBox).getStatus().isChecked) {
-//            ImageView.setVisibility(View.INVISIBLE);
-//        }
-//        else {
-//            return;
-//        }
+        else{
+            // hide linked image
+            iView.setVisibility(View.INVISIBLE);
+        }
     }
-
-
 }
 
 
