@@ -23,72 +23,82 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingBottom="1dp"
-        android:id="@+id/Body"/>
+        android:id="@+id/Body" />
 
     <ImageView
         android:src="@drawable/arms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Arms"/>
+        android:id="@+id/Arms"
+        android:saveEnabled="true"/>
 
 
     <ImageView
         android:src="@drawable/ears"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Ears"/>
+        android:id="@+id/Ears"
+        android:saveEnabled="true"/>
 
 
     <ImageView
         android:src="@drawable/eyebrows"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Eyebrows"/>
+        android:id="@+id/Eyebrows"
+        android:saveEnabled="true"/>
 
     <ImageView
         android:src="@drawable/eyes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Eyes"/>
+        android:id="@+id/Eyes"
+        android:saveEnabled="true"/>
 
     <ImageView
         android:src="@drawable/glasses"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Glasses"/>
+        android:id="@+id/Glasses"
+        android:saveEnabled="true"/>
 
     <ImageView
         android:src="@drawable/hat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Hat"/>
+        android:id="@+id/Hat"
+        android:saveEnabled="true"/>
 
 
     <ImageView
         android:src="@drawable/mouth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Mouth"/>
+        android:id="@+id/Mouth"
+        android:saveEnabled="true"/>
 
 
     <ImageView
         android:src="@drawable/mustache"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Mustache"/>
+        android:id="@+id/Mustache"
+        android:saveEnabled="true"/>
 
 
     <ImageView
         android:src="@drawable/nose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Nose"/>
+        android:id="@+id/Nose"
+        android:saveEnabled="true"/>
 
     <ImageView
         android:src="@drawable/shoes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Shoes"/>
+        android:id="@+id/Shoes"
+        android:saveEnabled="true"/>
 
     <GridLayout
         android:layout_width="wrap_content"
