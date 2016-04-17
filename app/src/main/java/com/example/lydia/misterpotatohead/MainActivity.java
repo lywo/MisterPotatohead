@@ -12,6 +12,8 @@ import java.util.Dictionary;
 import java.util.HashMap;
 import java.util.Map;
 
+//TODO rewrite CheckBox and ImageView using arrays and iterate in functions
+
 public class MainActivity extends AppCompatActivity {
 
     CheckBox cbarms, cbshoes, cbhat, cbmustache, cbeyes, cbeyebrows, cbglasses, cbnose, cbmouth, cbears;
